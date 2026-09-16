@@ -1,13 +1,12 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, ScrollView, SafeAreaView } from 'react-native';
 import { Smartphone, BookOpen, Layers, Terminal, Video, Award } from 'lucide-react-native';
 import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 
 export default function IndexScreen() {
   return (
-    <SafeAreaView className="flex-1 bg-[#FFFDF9]" edges={['top', 'left', 'right']}>
+    <SafeAreaView className="flex-1 bg-[#FFFDF9]">
       <ScrollView className="flex-1" contentContainerClassName="px-5 pt-4 pb-36">
         {/* Encabezado Institucional */}
         <View className="mb-6 pb-4 border-b-[3px] border-black">

@@ -12,22 +12,31 @@ export default function PedidosScreen() {
   // 2. 'items' para la cantidad de productos (inicializado en 0)
   // const [total, setTotal] = useState(0);
   // const [items, setItems] = useState(0);
-
+  const [total, setTotal] = useState(0);
+  const [items, setItems] = useState(0);
   // TODO [RETO 04 - PASO 2]: Programa las funciones de suma directa al total y conteo de items:
   const agregarSanduche = () => {
     // TODO: Sumar 1 a items y sumar 1.25 al total
+    setTotal(total + 1.25);
+    setItems(items + 1);
   };
 
   const agregarEmpanada = () => {
     // TODO: Sumar 1 a items y sumar 0.75 al total
+    setTotal(total + 0.75);
+    setItems(items + 1);
   };
 
   const agregarJugo = () => {
     // TODO: Sumar 1 a items y sumar 0.80 al total
+    setTotal(total + 0.80);
+    setItems(items + 1);
   };
 
   const vaciarCarrito = () => {
     // TODO: Reiniciar total e items a 0
+    setTotal(0);
+    setItems(0);
   };
 
   const total = 0; // TODO: Conectar con tu estado useState 'total'

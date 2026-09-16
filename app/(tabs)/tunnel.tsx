@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Wifi, WifiOff, CloudLightning, ShieldCheck, Network, Info } from 'lucide-react-native';
+// 💡 LIMPIEZA: Se removieron ShieldCheck e Info que no se utilizaban
+import { Wifi, WifiOff, CloudLightning, Network } from 'lucide-react-native';
 import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
 
 export default function TunnelScreen() {
-  // TODO [RETO 03 - PASO 1]: Declara el estado booleano 'tunelActivo' inicializado en false usando useState(false)
-  // const [tunelActivo, setTunelActivo] = useState(false);
+  // ✅ [RETO 03 - PASO 1]: Estado booleano inicializado en false
   const [tunelActivo, setTunelActivo] = useState(false);
-  // TODO [RETO 03 - PASO 2]: Programa la función toggleTunel para alternar entre true y false
+
+  // ✅ [RETO 03 - PASO 2]: Función para conmutar el estado del túnel
   const toggleTunel = () => {
     setTunelActivo(!tunelActivo);
   }; 
+
   return (
     <SafeAreaView className="flex-1 bg-[#FFFDF9]" edges={['top', 'left', 'right']}>
-      <ScrollView className="flex-1" contentContainerClassName="px-5 pt-4 pb-36">
+      <ScrollView className="flex-1" contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 16, paddingBottom: 144 }}>
         {/* Encabezado */}
         <View className="mb-6 pb-4 border-b-[3px] border-black">
           <Badge label="RETO 03 · REACTIVIDAD CON USESTATE" tone="green" />
@@ -38,7 +40,7 @@ export default function TunnelScreen() {
           variante="yellow"
         >
           <Text className="text-xs font-bold text-black leading-relaxed mb-3">
-            <b>Misión:</b> Abre este archivo (<Text className="font-mono text-blue-700 font-bold">app/(tabs)/tunnel.tsx</Text>). Descomenta y utiliza el hook <Text className="font-mono text-pink-700 font-bold">useState(false)</Text> para crear el estado reactivo <Text className="font-mono font-bold">[tunelActivo, setTunelActivo]</Text>.
+            <Text>Misión:</Text> Abre este archivo (<Text className="font-mono text-blue-700 font-bold">app/(tabs)/tunnel.tsx</Text>). Descomenta y utiliza el hook <Text className="font-mono text-pink-700 font-bold">useState(false)</Text> para crear el estado reactivo <Text className="font-mono font-bold">[tunelActivo, setTunelActivo]</Text>.
           </Text>
           <View className="bg-white/80 p-3 rounded-lg border-2 border-black gap-1.5">
             <Text className="font-extrabold text-xs text-black">🔍 Verificación del Reto:</Text>
@@ -77,6 +79,7 @@ export default function TunnelScreen() {
             </Text>
           </View>
 
+          {/* ✅ Vinculación correcta de propiedades */}
           <Button
             label={tunelActivo ? "Desconectar Túnel" : "Activar Modo Túnel (--tunnel)"}
             variante={tunelActivo ? "danger" : "success"}

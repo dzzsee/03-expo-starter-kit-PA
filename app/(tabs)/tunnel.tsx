@@ -13,11 +13,7 @@ export default function TunnelScreen() {
   // TODO [RETO 03 - PASO 2]: Programa la función toggleTunel para alternar entre true y false
   const toggleTunel = () => {
     setTunelActivo(!tunelActivo);
-  };
-
-  const tunelActivo = false; // TODO: Conectar con tu estado reactivo useState
-  const [tunelActivo, setTunelActivo] = useState(false);
-  
+  }; 
   return (
     <SafeAreaView className="flex-1 bg-[#FFFDF9]" edges={['top', 'left', 'right']}>
       <ScrollView className="flex-1" contentContainerClassName="px-5 pt-4 pb-36">

@@ -1,17 +1,20 @@
 {
   "expo": {
-    "name": "",
-    "slug": "",
+    "name": "Movil Semana 03",
+    "slug": "movil-semana-03",
+    "scheme": "movil-semana-03",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
-    "scheme": "",
+    "scheme": "movil-semana-03",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "orientation": "portrait",
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+      
     },
     "ios": {
       "supportsTablet": true
